@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 100px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-in-out;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.card {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
+}
