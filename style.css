@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("Assets/Frame\ 1.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.section {
+  padding: 80px 20px;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+.foto-profil {
+  width: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 300px;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card a {
+  color: yellow;
+  text-decoration: none;
+}
