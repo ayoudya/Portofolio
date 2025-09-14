@@ -177,7 +177,7 @@ footer {
 
 .logo-link .logo {
   height: 32px;   /* ukuran fix */
-  width: auto;    /* otomatis */
+  width: 32px;    /* otomatis */
   max-width: 100%;
   transition: transform 0.2s ease;
 }
