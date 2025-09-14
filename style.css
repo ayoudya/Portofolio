@@ -162,13 +162,37 @@ body {
 }
 
 /* Contact */
-#contact a {
-  text-decoration: none;
-  color: #0077cc;
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-#contact a:hover {
-  color: #005fa3;
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  background: #0077cc;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.contact-links img {
+  width: 24px;
+  height: 24px;
 }
 
 /* Footer */
