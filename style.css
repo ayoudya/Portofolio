@@ -153,3 +153,19 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;   /* bisa diganti sesuai ukuran logo */
+  width: auto;
+}
+
+.site-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
