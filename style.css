@@ -14,7 +14,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -35,37 +35,17 @@ body {
   padding: 15px 0;
 }
 
-/* Header flex: logo kiri – nama tengah – menu kanan */
-.header-flex {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-/* Logo kiri */
-.logo-img {
-  height: 30px;   /* ukuran logo */
-  width: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.logo-img:hover {
-  transform: scale(1.1);
-}
-
-/* Nama tengah */
+/* Nama kiri */
 .site-name {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
-  text-align: center;
-  flex: 1; /* isi ruang tengah */
 }
 
-/* Menu kanan */
+/* Menu tengah */
 .nav-menu {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -77,6 +57,24 @@ body {
 
 .nav-menu a:hover {
   color: #0077cc;
+}
+
+/* Icon kanan */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-icons img {
+  height: 24px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
 }
 
 /* Hero / Home */
