@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   color: #333;
-  background: #f5f5f5; /* kamu ganti nanti dengan background sendiri */
+  background: #f5f5f5; /* bisa ganti background sendiri */
   line-height: 1.6;
 }
 
@@ -32,16 +32,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
-.site-header .logo {
-  font-size: 1.5rem;
+/* Header flex: logo kiri – nama tengah – menu kanan */
+.header-flex {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo kiri */
+.logo-img {
+  height: 30px;   /* ukuran logo */
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* Nama tengah */
+.site-name {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex: 1; /* isi ruang tengah */
+}
+
+/* Menu kanan */
+.nav-menu {
+  display: flex;
+  gap: 20px;
 }
 
 .nav-menu a {
-  margin-left: 20px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -58,7 +86,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 80px; /* supaya header fixed tidak menutup */
+  padding-top: 80px; /* biar tidak ketutup header */
 }
 
 .hero-section h2 {
@@ -152,24 +180,4 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 40px;
-}
-
-/* Logo gambar (WhatsApp) */
-.logo-img {
-  height: 30px;   /* ukuran logo */
-  width: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.logo-img:hover {
-  transform: scale(1.1);
-}
-
-/* Nama di header */
-.site-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-  margin-left: 10px;
 }
