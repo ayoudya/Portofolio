@@ -91,7 +91,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 100px; /* buat konten tidak ketutup header */
+  padding-top: 100px; /* biar tidak ketutup header */
 }
 
 .hero-section h2 {
@@ -200,7 +200,7 @@ body {
 .contact-links img {
   width: 24px;
   height: 24px;
-  object-fit: contain; /* biar proporsional */
+  object-fit: contain; /* ukuran normal */
 }
 
 /* Footer */
