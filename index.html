@@ -6,11 +6,9 @@
   <title>Portofolio Ayoudya Titan Widyasmara</title>
 
   <link rel="icon" type="image/png" href="Assets/Subtract.png" />
-
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    /* Reset & base */
     * {
       margin: 0;
       padding: 0;
@@ -20,7 +18,7 @@
     body {
       font-family: Arial, sans-serif;
       color: #333;
-      background: #f5f5f5;
+      background: #f8f9fa;
       line-height: 1.6;
     }
     
@@ -30,7 +28,7 @@
       margin: 0 auto;
     }
     
-    /* Header - sticky */
+    /* Header */
     .site-header {
       position: fixed;
       top: 0;
@@ -39,12 +37,6 @@
       background: rgba(255,255,255,0.95);
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       z-index: 1000;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .site-header.scrolled {
-      background: rgba(255,255,255,0.85);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
     
     .site-header .container {
@@ -54,14 +46,12 @@
       padding: 15px 0;
     }
     
-    /* Nama kiri */
     .site-name {
       font-size: 1.2rem;
       font-weight: bold;
       color: #333;
     }
     
-    /* Menu tengah */
     .nav-menu {
       display: flex;
       align-items: center;
@@ -78,7 +68,6 @@
       color: #0077cc;
     }
     
-    /* Icon kanan */
     .social-icons {
       display: flex;
       align-items: center;
@@ -88,7 +77,6 @@
     .social-icons img {
       height: 24px;
       width: auto;
-      cursor: pointer;
       transition: transform 0.2s ease;
     }
     
@@ -96,23 +84,29 @@
       transform: scale(1.2);
     }
     
-    /* Hero / Home */
+    /* Hero */
     .hero-section {
-      height: 80vh;
+      height: 70vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding-top: 100px;
+      padding-top: 80px;
     }
     
     .hero-section h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: #555;
     }
     
-    /* Sections umum */
+    /* Section General */
     .section {
-      padding: 80px 0;
+      padding: 60px 0;
     }
     
     .section h2 {
@@ -121,20 +115,27 @@
       text-align: center;
       color: #333;
     }
+
+    .category-title {
+      font-size: 1.4rem;
+      margin: 40px 0 20px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #0077cc;
+      color: #0077cc;
+    }
     
-    /* Projects Grid */
+    /* Grid Project */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 25px;
-      margin-top: 20px;
     }
     
     .card {
       background: white;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       transition: transform 0.3s, box-shadow 0.3s;
       display: flex;
       flex-direction: column;
@@ -142,26 +143,55 @@
     
     .card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
-      display: block;
+      background-color: #eee;
     }
     
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
-    
-    /* Experience */
-    .experience-list {
-      list-style: none;
-      max-width: 600px;
+
+    /* Experience Timeline */
+    .timeline {
+      max-width: 800px;
       margin: 0 auto;
+      border-left: 3px solid #0077cc;
+      padding-left: 20px;
     }
-    
-    .experience-list li {
-      padding: 15px 0;
-      border-bottom: 1px solid #ddd;
+
+    .timeline-item {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #0077cc;
+    }
+
+    .timeline-date {
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #0077cc;
+    }
+
+    .timeline-title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .timeline-desc {
+      font-size: 0.95rem;
+      color: #555;
     }
     
     /* Contact */
@@ -170,14 +200,13 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin-top: 20px;
     }
     
     .contact-links a {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 15px;
+      padding: 12px 20px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -190,27 +219,26 @@
     .contact-links a:hover {
       background: #0077cc;
       color: white;
-      transform: translateY(-3px);
     }
-    
+
     .contact-links img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
+      width: 20px;
+      height: 20px;
     }
     
     /* Footer */
     footer {
-      background: #333;
+      background: #222;
       color: white;
       text-align: center;
       padding: 20px 0;
-      margin-top: 40px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <div class="logo-container">
@@ -239,148 +267,168 @@
     </div>
   </header>
 
+  <!-- HERO -->
   <section id="home" class="hero-section" data-aos="fade-up">
     <div class="container">
       <h2>Ayoudya Titan Widyasmara</h2>
-      <p>Data Analyst / Administration Enthusiast</p>
+      <p>Data Analyst | Administration Enthusiast</p>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about" class="section" data-aos="fade-up">
     <div class="container">
       <h2>About Me</h2>
-      <p style="text-align: justify; text-justify: inter-word;">
+      <p style="text-align: justify; max-width: 900px; margin: 0 auto;">
         Mathematics graduate and detail-oriented Data Analyst with a solid foundation in statistics, quantitative reasoning, and predictive modeling. Experienced in bridging administration and data management, having managed and validated thousands of operational records using Advanced Excel and Google Workspace. Proficient in transforming raw data into actionable insights using Python, Power BI, and Looker Studio.
-        <br><br>
-        Throughout my academic and internship journey, I have focused on streamlining data workflows—cleaning messy datasets, building automated systems, and creating period-over-period visualizations to support organizational decision-making. I enjoy breaking down complex numerical problems into clear, structured trends that help improve efficiency.
-        <br><br>
-        Passionate about educational technology and continuous learning in data science, I am eager to bring my analytical skills to a full-time Data Analyst role. I am ready to contribute with clean data, reliable insights, and data-driven solutions.
       </p>
     </div>
   </section>
 
-<section id="projects" class="section" data-aos="fade-up">
-  <div class="container">
-    <h2>Projects</h2>
-    
-    <div class="projects-grid">
-          
-      <!-- ================= KARTU PROYEK 1 ================= -->
-      <div class="card">
-        <img src="Assets/proyek1.jpg" alt="Student Lifestyle Analysis">
-        <div class="card-content" style="padding: 15px;">
-          <h3 style="margin: 0 0 10px 0; text-align: left; font-size: 1.15rem;">Dashboard Keseimbangan Akademik: Analisis Gaya Hidup dan Faktor Stres Siswa</h3>
-          <p style="margin: 0 0 15px 0; font-size: 0.9rem; color: #555; text-align: left;">
-            Analisis interaktif untuk memetakan pengaruh gaya hidup dan beban akademik terhadap tingkat stres siswa, serta mengidentifikasi risiko burnout bulanan menggunakan Python dan visualisasi interaktif Power BI.
-          </p>
-          <div class="project-options" style="display: flex; gap: 10px;">
-            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Analisis_Gaya_Hidup_dan_Faktor_Stres_Siswa.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 10px 5px; background: #cf4811; color: white; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">🐍 Lihat Code</a>
-            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Data_Visual_Analisis_Gaya_Hidup_dan_Faktor_Stres_Siswa.pbix" target="_blank" style="flex: 1; text-align: center; padding: 10px 5px; background: #f2c811; color: #444; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">📊 Power BI</a>
-            <a href="https://www.figma.com/deck/ef6i6uOOBS2Tcokcpr47to/Untitled?node-id=1-42&t=QXAWLmFj7QESsqPs-1" target="_blank" style="flex: 1; text-align: center; padding: 10px 5px; background: #d24122; color: white; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">🔸 PPT</a>
-          </div>
-        </div>
-      </div>
-      <!-- ================= AKHIR KARTU PROYEK 1 ================= -->
-
-
-      <!-- ================= KARTU PROYEK 2 (BARU) ================= -->
-      <div class="card">
-        <!-- 1. Ganti gambarnya di sini -->
-        <img src="Assets/proyek2.jpg" alt="Analisis Performa Ritel & Pemodelan Prediktif: Transformasi Data Transaksi Menjadi Strategi Inventaris Akurat"> 
-        <div class="card-content" style="padding: 15px;">
-          <!-- 2. Ganti judul proyek kedua -->
-          <h3 style="margin: 0 0 10px 0; text-align: left; font-size: 1.15rem;">Analisis Performa Ritel & Pemodelan Prediktif: Transformasi Data Transaksi Menjadi Strategi Inventaris Akurat</h3>
-          <!-- 3. Ganti deskripsi proyek kedua -->
-          <p style="margin: 0 0 15px 0; font-size: 0.9rem; color: #555; text-align: left;">
-            Analisis strategis yang memanfaatkan pemodelan prediktif untuk membaca tren penjualan dan perilaku konsumen di industri ritel. Presentasi ini bertujuan mengubah data historis menjadi proyeksi akurat demi pengambilan keputusan yang lebih cerdas dan menguntungkan.
-          </p>
-          <div class="project-options" style="display: flex; gap: 10px;">
-            <!-- 4. Ganti link-link di bawah ini dengan link proyek kedua -->
-            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Sales_Retail.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 10px 5px; background: #cf4811; color: white; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">🐍 Lihat Code</a>
-            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Analisis_Performa_Ritel_&_Pemodelan_Prediktif.pbix" target="_blank" style="flex: 1; text-align: center; padding: 10px 5px; background: #f2c811; color: #444; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">📊 Power BI</a>
-            <a href="https://www.figma.com/deck/WTH9sQ1tPCkv2onXe4uLhK" target="_blank" style="flex: 1; text-align: center; padding: 10px 5px; background: #d24122; color: white; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">🔸 PPT</a>
-          </div>
-        </div>
-      </div>
-      <!-- ================= AKHIR KARTU PROYEK 2 ================= -->
-
-
-
-      <!-- ================= KARTU PROYEK 3 ================= -->
-      <div class="card">
-        <!-- 1. Ganti gambarnya di sini -->
-        <img src="Assets/proyek3.jpg" alt="Pemodelan Prediktif Niat Beli Pelanggan E-Commerce"> 
-        <div class="card-content" style="padding: 15px;">
-          <!-- 2. Ganti judul proyek ketiga -->
-          <h3 style="margin: 0 0 10px 0; text-align: left; font-size: 1.15rem;">Pemodelan Prediktif Niat Beli Pelanggan E-Commerce</h3>
-          <!-- 3. Ganti deskripsi proyek ketiga -->
-          <p style="margin: 0 0 15px 0; font-size: 0.9rem; color: #555; text-align: left;">
-            Analisis Performa Ritel & Pemodelan Prediktif berbasis data E-commerce dengan evaluasi model awal berakurasi 31%. Di dalamnya juga dipaparkan strategi taktis dan rencana peningkatan performa model di masa depan untuk mendorong keputusan bisnis yang lebih akurat.
-          </p>
-          <div class="project-options" style="display: flex; gap: 10px;">
-            <!-- 4. Ganti link-link di bawah ini dengan link proyek ketiga -->
-            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Ecommerce_Consumer_Behavior_Analysis.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 10px 5px; background: #cf4811; color: white; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">🐍 Lihat Code</a>
-            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Pemodelan_Prediktif_Niat_Beli_Pelanggan_E-Commerce.pbix" target="_blank" style="flex: 1; text-align: center; padding: 10px 5px; background: #f2c811; color: #444; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">📊 Power BI</a>
-            <a href="LINK_PPT_3" style="flex: 1; text-align: center; padding: 10px 5px; background: #d24122; color: white; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">🔸 PPT</a>
-          </div>
-        </div>
-      </div>
-      <!-- ================= AKHIR KARTU PROYEK 3 ================= -->
-
-    </div>
-  </div>
-</section>
-
-  <section id="experience" class="section" data-aos="fade-up">
+  <!-- PROJECTS -->
+  <section id="projects" class="section" data-aos="fade-up">
     <div class="container">
-      <h2>Pengalaman</h2>
-      <ul class="experience-list">
-        <li><strong>2023</strong> – Magang di … </li>
-        <li><strong>2024</strong> – Proyek freelance …</li>
-      </ul>
+      <h2>Projects</h2>
+
+      <!-- KATEGORI 1: DATA ANALYSIS & PYTHON -->
+      <div class="category-title">🐍 End-to-End Data Analysis & Machine Learning</div>
+      <div class="projects-grid">
+        
+        <!-- Project Card 1 -->
+        <div class="card">
+          <img src="Assets/proyek1.jpg" alt="Student Lifestyle Analysis">
+          <div style="padding: 15px;">
+            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Analisis Gaya Hidup & Stres Siswa</h3>
+            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
+              Memetakan pengaruh gaya hidup dan beban akademik terhadap tingkat stres serta mengidentifikasi risiko burnout siswa menggunakan Python.
+            </p>
+            <div style="display: flex; gap: 8px;">
+              <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Analisis_Gaya_Hidup_dan_Faktor_Stres_Siswa.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #cf4811; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Code</a>
+              <a href="https://www.figma.com/deck/ef6i6uOOBS2Tcokcpr47to/Untitled?node-id=1-42&t=QXAWLmFj7QESsqPs-1" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #d24122; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">PPT</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="card">
+          <img src="Assets/proyek2.jpg" alt="Retail Analysis">
+          <div style="padding: 15px;">
+            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Analisis Performa Ritel & Pemodelan Prediktif</h3>
+            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
+              Transformasi data transaksi ritel menjadi strategi inventaris akurat menggunakan pemodelan prediktif berbasis Python.
+            </p>
+            <div style="display: flex; gap: 8px;">
+              <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Sales_Retail.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #cf4811; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Code</a>
+              <a href="https://www.figma.com/deck/WTH9sQ1tPCkv2onXe4uLhK" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #d24122; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">PPT</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="card">
+          <img src="Assets/proyek3.jpg" alt="E-Commerce Intent">
+          <div style="padding: 15px;">
+            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Pemodelan Niat Beli E-Commerce</h3>
+            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
+              Analisis perilaku pengunjung e-commerce dan pengembangan model prediktif niat beli konsumen.
+            </p>
+            <div style="display: flex; gap: 8px;">
+              <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Ecommerce_Consumer_Behavior_Analysis.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #cf4811; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- KATEGORI 2: POWER BI & DASHBOARD -->
+      <div class="category-title">📊 Business Intelligence & Visual Dashboards</div>
+      <div class="projects-grid">
+        
+        <!-- BI Card 1 -->
+        <div class="card">
+          <img src="Assets/proyek1.jpg" alt="Power BI Student Dashboard">
+          <div style="padding: 15px;">
+            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Dashboard Keseimbangan Akademik Siswa</h3>
+            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
+              Dashboard Power BI interaktif untuk monitoring tren stres dan indikator burnout siswa secara visual.
+            </p>
+            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Data_Visual_Analisis_Gaya_Hidup_dan_Faktor_Stres_Siswa.pbix" target="_blank" style="display: block; text-align: center; padding: 8px; background: #f2c811; color: #333; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">📊 Power BI File</a>
+          </div>
+        </div>
+
+        <!-- BI Card 2 -->
+        <div class="card">
+          <img src="Assets/proyek2.jpg" alt="Power BI Retail Dashboard">
+          <div style="padding: 15px;">
+            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Dashboard Performa Ritel & Sales</h3>
+            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
+              Visualisasi metrik penjualan ritel dan dinamika stok inventaris bulanan menggunakan Power BI.
+            </p>
+            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Analisis_Performa_Ritel_&_Pemodelan_Prediktif.pbix" target="_blank" style="display: block; text-align: center; padding: 8px; background: #f2c811; color: #333; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">📊 Power BI File</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Pengalaman</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2023 - Sekarang</div>
+          <div class="timeline-title">Data Analyst & Admin Project Specialist (Freelance / Academic)</div>
+          <div class="timeline-desc">
+            Mengolah dan memvalidasi ribuan data operasional menggunakan Advanced Excel & Python. Membangun visualisasi data interaktif Power BI untuk membantu pengambilan keputusan strategis.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2022 - 2023</div>
+          <div class="timeline-title">Staf Administrasi & Pengelolaan Data</div>
+          <div class="timeline-desc">
+            Bertanggung jawab atas efisiensi input data, pembuatan laporan berkala, serta digitalisasi dokumen organisasi menggunakan Google Workspace.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="section" data-aos="fade-up">
     <div class="container">
       <h2>Kontak</h2>
       <div class="contact-links">
         <a href="https://wa.me/6285640314557" target="_blank">
-          <img src="Assets/WhatsApp.png" alt="WhatsApp"> WA/Me +6285640314557
+          <img src="Assets/WhatsApp.png" alt="WhatsApp"> WhatsApp
         </a>
         <a href="mailto:ayoudya88@gmail.com">
-          <img src="Assets/Email.png" alt="Email"> ayoudya88@gmail.com
+          <img src="Assets/Email.png" alt="Email"> Email
         </a>
         <a href="https://linkedin.com/in/ayoudyatitan" target="_blank">
-          <img src="Assets/LinkedIn.png" alt="LinkedIn"> LinkedIn/in/ayoudyatitan
+          <img src="Assets/LinkedIn.png" alt="LinkedIn"> LinkedIn
         </a>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Ayoudya Titan Widyasmara. Semua hak cipta dilindungi.</p>
+      <p>&copy; 2026 Ayoudya Titan Widyasmara. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Inisialisasi AOS global
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
       once: true
-    });
-  
-    // Sticky header effect
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('.site-header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
     });
   </script>
 </body>
