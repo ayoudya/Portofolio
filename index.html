@@ -6,195 +6,241 @@
   <title>Portofolio Ayoudya Titan Widyasmara</title>
 
   <link rel="icon" type="image/png" href="Assets/Subtract.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+    /* RESET & BASE CLAY STYLE */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
     
     body {
-      font-family: Arial, sans-serif;
-      color: #333;
-      background: #f8f9fa;
+      color: #4a5568;
+      background: #f0f4f8; /* Soft Pastel Neutral Background */
       line-height: 1.6;
     }
     
     .container {
       width: 90%;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
     }
-    
-    /* Header */
+
+    /* HEADER CLAY EFFECT */
     .site-header {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.95);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1100px;
+      background: #f0f4f8;
+      border-radius: 20px;
+      box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
       z-index: 1000;
+      padding: 5px 0;
     }
     
     .site-header .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 0;
+      padding: 10px 20px;
     }
     
     .site-name {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #333;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #3b82f6;
     }
     
     .nav-menu {
       display: flex;
-      align-items: center;
       gap: 20px;
     }
     
     .nav-menu a {
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
+      color: #64748b;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
     }
     
     .nav-menu a:hover {
-      color: #0077cc;
+      color: #3b82f6;
     }
     
     .social-icons {
       display: flex;
-      align-items: center;
-      gap: 15px;
+      gap: 12px;
     }
     
     .social-icons img {
-      height: 24px;
+      height: 22px;
       width: auto;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s;
     }
     
     .social-icons img:hover {
-      transform: scale(1.2);
+      transform: scale(1.15);
     }
     
-    /* Hero */
+    /* HERO SECTION */
     .hero-section {
-      height: 70vh;
+      height: 75vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding-top: 80px;
+      padding-top: 60px;
+    }
+
+    .hero-card {
+      background: #f0f4f8;
+      padding: 40px 30px;
+      border-radius: 30px;
+      box-shadow: 12px 12px 24px #d1d9e6, -12px -12px 24px #ffffff;
+      max-width: 700px;
     }
     
     .hero-section h2 {
-      font-size: 2.8rem;
+      font-size: 2.2rem;
+      color: #1e293b;
       margin-bottom: 10px;
     }
 
-    .hero-section p {
-      font-size: 1.2rem;
-      color: #555;
+    .hero-subtitle {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #3b82f6;
+      background: #e0e7ff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: inset 3px 3px 6px #c7d2fe, inset -3px -3px 6px #ffffff;
     }
     
-    /* Section General */
+    /* SECTIONS */
     .section {
       padding: 60px 0;
     }
     
     .section h2 {
       margin-bottom: 30px;
-      font-size: 2rem;
+      font-size: 1.8rem;
       text-align: center;
-      color: #333;
+      color: #1e293b;
     }
 
     .category-title {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       margin: 40px 0 20px 0;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #0077cc;
-      color: #0077cc;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    
-    /* Grid Project */
+
+    /* CLAY CARDS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
     
-    .card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
+    .clay-card {
+      background: #f0f4f8;
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 9px 9px 18px #d1d9e6, -9px -9px 18px #ffffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
     }
+
+    .clay-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 14px 14px 28px #c2cbd8, -14px -14px 28px #ffffff;
+    }
     
-    .card img {
+    .clay-card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
-      background-color: #eee;
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      border-radius: 16px;
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+      background-color: #e2e8f0;
     }
 
-    /* Experience Timeline */
+    /* BUTTONS CLAY STYLE */
+    .btn-clay {
+      display: inline-block;
+      text-align: center;
+      padding: 10px 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .btn-blue {
+      background: #3b82f6;
+      color: white;
+      box-shadow: 4px 4px 8px #c2cbd8, inset 2px 2px 4px #93c5fd, inset -2px -2px 4px #1d4ed8;
+    }
+
+    .btn-yellow {
+      background: #f59e0b;
+      color: white;
+      box-shadow: 4px 4px 8px #c2cbd8, inset 2px 2px 4px #fde047, inset -2px -2px 4px #b45309;
+    }
+
+    .btn-orange {
+      background: #f97316;
+      color: white;
+      box-shadow: 4px 4px 8px #c2cbd8, inset 2px 2px 4px #fdba74, inset -2px -2px 4px #c2410c;
+    }
+
+    .btn-clay:active {
+      transform: scale(0.97);
+    }
+
+    /* TIMELINE CLAY */
     .timeline {
       max-width: 800px;
       margin: 0 auto;
-      border-left: 3px solid #0077cc;
-      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
-    .timeline-item {
-      margin-bottom: 30px;
-      position: relative;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -29px;
-      top: 5px;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background: #0077cc;
+    .timeline-card {
+      background: #f0f4f8;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 6px 6px 14px #d1d9e6, -6px -6px 14px #ffffff;
     }
 
     .timeline-date {
       font-size: 0.85rem;
-      font-weight: bold;
-      color: #0077cc;
+      font-weight: 700;
+      color: #3b82f6;
     }
 
     .timeline-title {
-      font-size: 1.15rem;
-      font-weight: bold;
-      margin: 5px 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 4px 0 8px 0;
     }
 
-    .timeline-desc {
-      font-size: 0.95rem;
-      color: #555;
-    }
-    
-    /* Contact */
+    /* CONTACT CLAY */
     .contact-links {
       display: flex;
       justify-content: center;
@@ -205,34 +251,32 @@
     .contact-links a {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      font-weight: 500;
-      color: #333;
+      gap: 10px;
+      padding: 14px 24px;
+      background: #f0f4f8;
+      border-radius: 20px;
+      box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
+      font-weight: 600;
+      color: #334155;
       text-decoration: none;
+      transition: all 0.2s ease;
     }
     
     .contact-links a:hover {
-      background: #0077cc;
-      color: white;
+      box-shadow: inset 4px 4px 8px #d1d9e6, inset -4px -4px 8px #ffffff;
+      color: #3b82f6;
     }
 
     .contact-links img {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
     }
     
-    /* Footer */
     footer {
-      background: #222;
-      color: white;
       text-align: center;
-      padding: 20px 0;
-      margin-top: 50px;
+      padding: 30px 0;
+      font-size: 0.85rem;
+      color: #94a3b8;
     }
   </style>
 </head>
@@ -241,9 +285,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container">
-      <div class="logo-container">
-        <span class="site-name">Ayoudya Titan Widyasmara</span>
-      </div>
+      <span class="site-name">Ayoudya Titan</span>
   
       <nav class="nav-menu">
         <a href="#home">Home</a>
@@ -254,24 +296,18 @@
       </nav>
   
       <div class="social-icons">
-        <a href="https://wa.me/6285640314557" target="_blank">
-          <img src="Assets/WhatsApp.png" alt="WhatsApp">
-        </a>
-        <a href="mailto:ayoudya88@gmail.com" target="_blank">
-          <img src="Assets/Email.png" alt="Email">
-        </a>
-        <a href="https://www.linkedin.com/in/ayoudyatitan" target="_blank">
-          <img src="Assets/LinkedIn.png" alt="LinkedIn">
-        </a>
+        <a href="https://wa.me/6285640314557" target="_blank"><img src="Assets/WhatsApp.png" alt="WhatsApp"></a>
+        <a href="mailto:ayoudya88@gmail.com" target="_blank"><img src="Assets/Email.png" alt="Email"></a>
+        <a href="https://www.linkedin.com/in/ayoudyatitan" target="_blank"><img src="Assets/LinkedIn.png" alt="LinkedIn"></a>
       </div>
     </div>
   </header>
 
   <!-- HERO -->
   <section id="home" class="hero-section" data-aos="fade-up">
-    <div class="container">
+    <div class="hero-card">
       <h2>Ayoudya Titan Widyasmara</h2>
-      <p>Business Intelligence Analyst | Power BI & Data Analytics</p>
+      <span class="hero-subtitle">Business Intelligence Analyst | Power BI & Data Analytics</span>
     </div>
   </section>
 
@@ -279,9 +315,9 @@
   <section id="about" class="section" data-aos="fade-up">
     <div class="container">
       <h2>About Me</h2>
-      <p style="text-align: justify; max-width: 900px; margin: 0 auto;">
-        Mathematics graduate and detail-oriented Data Analyst with a solid foundation in statistics, quantitative reasoning, and predictive modeling. Experienced in bridging administration and data management, having managed and validated thousands of operational records using Advanced Excel and Google Workspace. Proficient in transforming raw data into actionable insights using Python, Power BI, and Looker Studio.
-      </p>
+      <div class="timeline-card" style="text-align: justify; max-width: 850px; margin: 0 auto;">
+        Mathematics graduate and detail-oriented Data Analyst with a solid foundation in statistics, quantitative reasoning, and predictive modeling. Experienced in bridging administration and data management using Advanced Excel, Google Workspace, Python, and Power BI. Eager to deliver actionable insights and intuitive visual dashboards.
+      </div>
     </div>
   </section>
 
@@ -290,81 +326,79 @@
     <div class="container">
       <h2>Projects</h2>
 
-      <!-- KATEGORI 1: DATA ANALYSIS & PYTHON -->
-      <div class="category-title">🐍 End-to-End Data Analysis & Machine Learning</div>
+      <!-- KATEGORI 1 -->
+      <div class="category-title">🐍 Data Analysis & Machine Learning</div>
       <div class="projects-grid">
         
-        <!-- Project Card 1 -->
-        <div class="card">
+        <!-- Card 1 -->
+        <div class="clay-card">
           <img src="Assets/proyek1.jpg" alt="Student Lifestyle Analysis">
-          <div style="padding: 15px;">
-            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Analisis Gaya Hidup & Stres Siswa</h3>
-            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
-              Memetakan pengaruh gaya hidup dan beban akademik terhadap tingkat stres serta mengidentifikasi risiko burnout siswa menggunakan Python.
+          <div style="padding-top: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+            <h3 style="font-size: 1.05rem; color: #1e293b; margin-bottom: 8px;">Analisis Gaya Hidup & Stres Siswa</h3>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px; flex-grow: 1;">
+              Memetakan pengaruh gaya hidup dan beban akademik terhadap tingkat stres serta mengidentifikasi risiko burnout menggunakan Python.
             </p>
-            <div style="display: flex; gap: 8px;">
-              <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Analisis_Gaya_Hidup_dan_Faktor_Stres_Siswa.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #cf4811; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Code</a>
-              <a href="https://www.figma.com/deck/ef6i6uOOBS2Tcokcpr47to/Untitled?node-id=1-42&t=QXAWLmFj7QESsqPs-1" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #d24122; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">PPT</a>
+            <div style="display: flex; gap: 10px;">
+              <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Analisis_Gaya_Hidup_dan_Faktor_Stres_Siswa.ipynb" target="_blank" class="btn-clay btn-blue" style="flex: 1;">🐍 Code</a>
+              <a href="https://www.figma.com/deck/ef6i6uOOBS2Tcokcpr47to/Untitled?node-id=1-42&t=QXAWLmFj7QESsqPs-1" target="_blank" class="btn-clay btn-orange" style="flex: 1;">🔸 PPT</a>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 2 -->
-        <div class="card">
+        <!-- Card 2 -->
+        <div class="clay-card">
           <img src="Assets/proyek2.jpg" alt="Retail Analysis">
-          <div style="padding: 15px;">
-            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Analisis Performa Ritel & Pemodelan Prediktif</h3>
-            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
+          <div style="padding-top: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+            <h3 style="font-size: 1.05rem; color: #1e293b; margin-bottom: 8px;">Analisis Performa Ritel & Prediksi</h3>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px; flex-grow: 1;">
               Transformasi data transaksi ritel menjadi strategi inventaris akurat menggunakan pemodelan prediktif berbasis Python.
             </p>
-            <div style="display: flex; gap: 8px;">
-              <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Sales_Retail.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #cf4811; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Code</a>
-              <a href="https://www.figma.com/deck/WTH9sQ1tPCkv2onXe4uLhK" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #d24122; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">PPT</a>
+            <div style="display: flex; gap: 10px;">
+              <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Sales_Retail.ipynb" target="_blank" class="btn-clay btn-blue" style="flex: 1;">🐍 Code</a>
+              <a href="https://www.figma.com/deck/WTH9sQ1tPCkv2onXe4uLhK" target="_blank" class="btn-clay btn-orange" style="flex: 1;">🔸 PPT</a>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 3 -->
-        <div class="card">
+        <!-- Card 3 -->
+        <div class="clay-card">
           <img src="Assets/proyek3.jpg" alt="E-Commerce Intent">
-          <div style="padding: 15px;">
-            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Pemodelan Niat Beli E-Commerce</h3>
-            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
+          <div style="padding-top: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+            <h3 style="font-size: 1.05rem; color: #1e293b; margin-bottom: 8px;">Pemodelan Niat Beli E-Commerce</h3>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px; flex-grow: 1;">
               Analisis perilaku pengunjung e-commerce dan pengembangan model prediktif niat beli konsumen.
             </p>
-            <div style="display: flex; gap: 8px;">
-              <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Ecommerce_Consumer_Behavior_Analysis.ipynb" target="_blank" style="flex: 1; text-align: center; padding: 8px; background: #cf4811; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Code</a>
-            </div>
+            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Python_Analysis/Ecommerce_Consumer_Behavior_Analysis.ipynb" target="_blank" class="btn-clay btn-blue" style="width: 100%;">🐍 Code</a>
           </div>
         </div>
 
       </div>
 
-      <!-- KATEGORI 2: POWER BI & DASHBOARD -->
-      <div class="category-title">📊 Business Intelligence & Visual Dashboards</div>
+      <!-- KATEGORI 2 -->
+      <div class="category-title" style="margin-top: 50px;">📊 Business Intelligence & Dashboards</div>
       <div class="projects-grid">
         
         <!-- BI Card 1 -->
-        <div class="card">
+        <div class="clay-card">
           <img src="Assets/proyek1.jpg" alt="Power BI Student Dashboard">
-          <div style="padding: 15px;">
-            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Dashboard Keseimbangan Akademik Siswa</h3>
-            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
-              Dashboard Power BI interaktif untuk monitoring tren stres dan indikator burnout siswa secara visual.
+          <div style="padding-top: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+            <h3 style="font-size: 1.05rem; color: #1e293b; margin-bottom: 8px;">Dashboard Keseimbangan Akademik</h3>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px; flex-grow: 1;">
+              Dashboard Power BI interaktif dengan calculated DAX measures untuk monitoring tren stres dan indikator burnout siswa.
             </p>
-            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Data_Visual_Analisis_Gaya_Hidup_dan_Faktor_Stres_Siswa.pbix" target="_blank" style="display: block; text-align: center; padding: 8px; background: #f2c811; color: #333; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">📊 Power BI File</a>
+            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Data_Visual_Analisis_Gaya_Hidup_dan_Faktor_Stres_Siswa.pbix" target="_blank" class="btn-clay btn-yellow" style="width: 100%;">📊 Power BI File</a>
           </div>
         </div>
 
         <!-- BI Card 2 -->
-        <div class="card">
+        <div class="clay-card">
           <img src="Assets/proyek2.jpg" alt="Power BI Retail Dashboard">
-          <div style="padding: 15px;">
-            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Dashboard Performa Ritel & Sales</h3>
-            <p style="font-size: 0.85rem; color: #555; margin-bottom: 15px;">
-              Visualisasi metrik penjualan ritel dan dinamika stok inventaris bulanan menggunakan Power BI.
+          <div style="padding-top: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+            <h3 style="font-size: 1.05rem; color: #1e293b; margin-bottom: 8px;">Dashboard Performa Penjualan Ritel</h3>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px; flex-grow: 1;">
+              Visualisasi metrik penjualan ritel, estimasi pendapatan, dan dinamika stok inventaris bulanan menggunakan Power BI.
             </p>
-            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Analisis_Performa_Ritel_&_Pemodelan_Prediktif.pbix" target="_blank" style="display: block; text-align: center; padding: 8px; background: #f2c811; color: #333; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">📊 Power BI File</a>
+            <a href="https://github.com/ayoudya/Query_Quest/blob/main/Power_BI_Dashboard/Analisis_Performa_Ritel_&_Pemodelan_Prediktif.pbix" target="_blank" class="btn-clay btn-yellow" style="width: 100%;">📊 Power BI File</a>
           </div>
         </div>
 
@@ -378,20 +412,20 @@
       <h2>Pengalaman</h2>
       <div class="timeline">
         
-        <div class="timeline-item">
+        <div class="timeline-card">
           <div class="timeline-date">2023 - Sekarang</div>
-          <div class="timeline-title">Data Analyst & Admin Project Specialist (Freelance / Academic)</div>
-          <div class="timeline-desc">
-            Mengolah dan memvalidasi ribuan data operasional menggunakan Advanced Excel & Python. Membangun visualisasi data interaktif Power BI untuk membantu pengambilan keputusan strategis.
-          </div>
+          <div class="timeline-title">Business Intelligence & Data Specialist</div>
+          <p style="font-size: 0.9rem; color: #64748b;">
+            Pengembangan dashboard interaktif menggunakan Power BI dan DAX kompleks, memvalidasi ribuan data operasional, serta melakukan analisis prediktif berbasis Python.
+          </p>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-card">
           <div class="timeline-date">2022 - 2023</div>
-          <div class="timeline-title">Staf Administrasi & Pengelolaan Data</div>
-          <div class="timeline-desc">
-            Bertanggung jawab atas efisiensi input data, pembuatan laporan berkala, serta digitalisasi dokumen organisasi menggunakan Google Workspace.
-          </div>
+          <div class="timeline-title">Administrative Data Staff</div>
+          <p style="font-size: 0.9rem; color: #64748b;">
+            Pengelolaan dan rekapan data bulanan berbasis Advanced Excel & Google Sheets untuk efisiensi alur kerja operasional.
+          </p>
         </div>
 
       </div>
@@ -403,33 +437,22 @@
     <div class="container">
       <h2>Kontak</h2>
       <div class="contact-links">
-        <a href="https://wa.me/6285640314557" target="_blank">
-          <img src="Assets/WhatsApp.png" alt="WhatsApp"> WhatsApp
-        </a>
-        <a href="mailto:ayoudya88@gmail.com">
-          <img src="Assets/Email.png" alt="Email"> Email
-        </a>
-        <a href="https://linkedin.com/in/ayoudyatitan" target="_blank">
-          <img src="Assets/LinkedIn.png" alt="LinkedIn"> LinkedIn
-        </a>
+        <a href="https://wa.me/6285640314557" target="_blank"><img src="Assets/WhatsApp.png" alt="WhatsApp"> WhatsApp</a>
+        <a href="mailto:ayoudya88@gmail.com"><img src="Assets/Email.png" alt="Email"> Email</a>
+        <a href="https://linkedin.com/in/ayoudyatitan" target="_blank"><img src="Assets/LinkedIn.png" alt="LinkedIn"> LinkedIn</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Ayoudya Titan Widyasmara. All rights reserved.</p>
+      <p>&copy; 2026 Ayoudya Titan Widyasmara. Built with Claymorphism Style.</p>
     </div>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true
-    });
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
   </script>
 </body>
 </html>
