@@ -10,7 +10,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    /* RESET & BASE SOFT CLAY STYLE */
+    /* RESET & BASE CALM CLAY STYLE */
     * {
       margin: 0;
       padding: 0;
@@ -20,7 +20,7 @@
     
     body {
       color: #334155;
-      background: #eef2f6;
+      background: #f1f5f9;
       line-height: 1.6;
     }
     
@@ -30,7 +30,7 @@
       margin: 0 auto;
     }
 
-    /* HEADER FIX WITH SOFT CLAY SHADOW */
+    /* HEADER FIX WITH SOFT CALM SHADOW */
     .site-header {
       position: fixed;
       top: 15px;
@@ -38,9 +38,9 @@
       transform: translateX(-50%);
       width: 90%;
       max-width: 1100px;
-      background: #eef2f6;
+      background: #f1f5f9;
       border-radius: 20px;
-      box-shadow: 6px 6px 14px rgba(166, 180, 200, 0.4), -6px -6px 14px rgba(255, 255, 255, 0.8);
+      box-shadow: 5px 5px 12px #cbd5e1, -5px -5px 12px #ffffff;
       z-index: 1000;
       padding: 10px 0;
     }
@@ -57,7 +57,7 @@
     .site-name {
       font-size: 1.1rem;
       font-weight: 700;
-      color: #2563eb;
+      color: #475569;
     }
     
     .nav-menu {
@@ -74,7 +74,7 @@
     }
     
     .nav-menu a:hover {
-      color: #2563eb;
+      color: #334155;
     }
     
     .social-icons {
@@ -89,7 +89,7 @@
     }
     
     .social-icons img:hover {
-      transform: scale(1.15);
+      transform: scale(1.1);
     }
     
     /* HERO SECTION */
@@ -104,25 +104,25 @@
     }
 
     .hero-card {
-      background: #eef2f6;
+      background: #f1f5f9;
       padding: 40px 24px;
-      border-radius: 30px;
-      box-shadow: 8px 8px 18px rgba(166, 180, 200, 0.45), -8px -8px 18px rgba(255, 255, 255, 0.85);
+      border-radius: 28px;
+      box-shadow: 8px 8px 18px #cbd5e1, -8px -8px 18px #ffffff;
       max-width: 700px;
       width: 100%;
     }
     
     .hero-subtitle {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      color: #2563eb;
-      background: #dbeafe;
+      color: #475569;
+      background: #e2e8f0;
       padding: 8px 18px;
       border-radius: 20px;
       display: inline-block;
       margin-top: 14px;
       line-height: 1.4;
-      box-shadow: inset 2px 2px 4px rgba(147, 197, 253, 0.5), inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+      box-shadow: inset 2px 2px 4px #cbd5e1, inset -2px -2px 4px #ffffff;
     }
     
     /* SECTIONS */
@@ -132,13 +132,13 @@
     
     .section h2 {
       margin-bottom: 25px;
-      font-size: 1.75rem;
+      font-size: 1.7rem;
       text-align: center;
       color: #1e293b;
     }
 
     .category-title {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       margin: 35px 0 20px 0;
       color: #475569;
       display: flex;
@@ -147,7 +147,7 @@
       font-weight: 700;
     }
 
-    /* CLAY CARDS WITH REFINED SHADOWS */
+    /* CLAY CARDS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -155,10 +155,10 @@
     }
     
     .clay-card {
-      background: #eef2f6;
+      background: #f1f5f9;
       border-radius: 22px;
       padding: 20px;
-      box-shadow: 6px 6px 14px rgba(166, 180, 200, 0.4), -6px -6px 14px rgba(255, 255, 255, 0.8);
+      box-shadow: 6px 6px 14px #cbd5e1, -6px -6px 14px #ffffff;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       display: flex;
       flex-direction: column;
@@ -166,7 +166,7 @@
 
     .clay-card:hover {
       transform: translateY(-4px);
-      box-shadow: 9px 9px 20px rgba(166, 180, 200, 0.5), -9px -9px 20px rgba(255, 255, 255, 0.9);
+      box-shadow: 9px 9px 20px #94a3b8, -9px -9px 20px #ffffff;
     }
     
     .clay-card img {
@@ -177,7 +177,7 @@
       background-color: #cbd5e1;
     }
 
-    /* BUTTONS CLAY STYLE */
+    /* CALM CLAY BUTTONS */
     .btn-clay {
       display: inline-block;
       text-align: center;
@@ -185,59 +185,64 @@
       border-radius: 14px;
       text-decoration: none;
       font-size: 0.85rem;
-      font-weight: 700;
+      font-weight: 600;
       transition: all 0.2s ease;
       cursor: pointer;
       border: none;
     }
 
+    /* Soft Indigo / Slate */
     .btn-blue {
-      background: #3b82f6;
-      color: white;
-      box-shadow: 3px 3px 6px rgba(166, 180, 200, 0.4), inset 2px 2px 4px #60a5fa, inset -2px -2px 4px #1d4ed8;
+      background: #64748b;
+      color: #ffffff;
+      box-shadow: 4px 4px 8px #cbd5e1, inset 2px 2px 4px #94a3b8, inset -2px -2px 4px #475569;
     }
 
+    /* Soft Warm Amber */
     .btn-yellow {
-      background: #f59e0b;
-      color: white;
-      box-shadow: 3px 3px 6px rgba(166, 180, 200, 0.4), inset 2px 2px 4px #fbbf24, inset -2px -2px 4px #b45309;
+      background: #d97706;
+      color: #ffffff;
+      box-shadow: 4px 4px 8px #cbd5e1, inset 2px 2px 4px #f59e0b, inset -2px -2px 4px #b45309;
     }
 
+    /* Soft Warm Sand */
     .btn-orange {
-      background: #f97316;
-      color: white;
-      box-shadow: 3px 3px 6px rgba(166, 180, 200, 0.4), inset 2px 2px 4px #fb923c, inset -2px -2px 4px #c2410c;
+      background: #ea580c;
+      color: #ffffff;
+      box-shadow: 4px 4px 8px #cbd5e1, inset 2px 2px 4px #f97316, inset -2px -2px 4px #c2410c;
     }
 
+    /* Calm Outline Clay */
     .btn-outline {
-      background: #eef2f6;
-      color: #2563eb;
-      box-shadow: 5px 5px 12px rgba(166, 180, 200, 0.4), -5px -5px 12px rgba(255, 255, 255, 0.8);
-      border: 1px solid #dbeafe;
+      background: #f1f5f9;
+      color: #475569;
+      box-shadow: 5px 5px 12px #cbd5e1, -5px -5px 12px #ffffff;
+      border: 1px solid #e2e8f0;
       padding: 12px 26px;
     }
 
     .btn-clay:hover {
       transform: translateY(-2px);
+      opacity: 0.95;
     }
 
     .btn-clay:active {
       transform: scale(0.98);
     }
 
-    /* FLOATING RATE CARD WIDGET */
+    /* FLOATING WIDGET (CALM SLATE TONING) */
     .floating-ratecard {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #8b5cf6;
-      color: white;
+      background: #475569;
+      color: #ffffff;
       padding: 12px 20px;
       border-radius: 50px;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.82rem;
       text-decoration: none;
-      box-shadow: 5px 5px 14px rgba(166, 180, 200, 0.5), inset 2px 2px 4px #a78bfa, inset -2px -2px 4px #6d28d9;
+      box-shadow: 6px 6px 14px rgba(100, 116, 139, 0.3), inset 2px 2px 4px #64748b, inset -2px -2px 4px #334155;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -247,7 +252,7 @@
 
     .floating-ratecard:hover {
       transform: scale(1.04) translateY(-2px);
-      background: #7c3aed;
+      background: #334155;
     }
 
     /* TIMELINE */
@@ -260,16 +265,16 @@
     }
 
     .timeline-card {
-      background: #eef2f6;
+      background: #f1f5f9;
       padding: 22px;
       border-radius: 18px;
-      box-shadow: 5px 5px 12px rgba(166, 180, 200, 0.35), -5px -5px 12px rgba(255, 255, 255, 0.8);
+      box-shadow: 5px 5px 12px #cbd5e1, -5px -5px 12px #ffffff;
     }
 
     .timeline-date {
       font-size: 0.82rem;
       font-weight: 700;
-      color: #2563eb;
+      color: #64748b;
     }
 
     .timeline-title {
@@ -293,14 +298,14 @@
       margin-bottom: 5px;
     }
 
-    /* CLEAN MODERN POP-UP MODAL */
+    /* CLEAN MINIMALIST POP-UP MODAL */
     .modal-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(15, 23, 42, 0.45);
+      background: rgba(15, 23, 42, 0.4);
       backdrop-filter: blur(4px);
       display: none;
       justify-content: center;
@@ -310,14 +315,14 @@
     }
 
     .modal-content {
-      background: #eef2f6;
+      background: #f1f5f9;
       border-radius: 24px;
       max-width: 760px;
       width: 100%;
       max-height: 85vh;
       overflow-y: auto;
       padding: 28px 24px;
-      box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.7);
+      box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.12), -6px -6px 15px #ffffff;
       position: relative;
       animation: modalFadeIn 0.25s ease;
     }
@@ -337,13 +342,13 @@
     }
 
     .modal-title {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: #1e293b;
       font-weight: 700;
     }
 
     .close-btn {
-      background: #eef2f6;
+      background: #f1f5f9;
       border: none;
       font-size: 1.3rem;
       font-weight: 700;
@@ -352,7 +357,7 @@
       width: 34px;
       height: 34px;
       border-radius: 50%;
-      box-shadow: 3px 3px 7px rgba(166, 180, 200, 0.4), -3px -3px 7px rgba(255, 255, 255, 0.8);
+      box-shadow: 3px 3px 7px #cbd5e1, -3px -3px 7px #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -377,9 +382,9 @@
       align-items: center;
       gap: 8px;
       padding: 12px 20px;
-      background: #eef2f6;
+      background: #f1f5f9;
       border-radius: 16px;
-      box-shadow: 5px 5px 12px rgba(166, 180, 200, 0.4), -5px -5px 12px rgba(255, 255, 255, 0.8);
+      box-shadow: 5px 5px 12px #cbd5e1, -5px -5px 12px #ffffff;
       font-weight: 600;
       font-size: 0.9rem;
       color: #334155;
@@ -388,8 +393,8 @@
     }
     
     .contact-links a:hover {
-      box-shadow: inset 3px 3px 6px rgba(166, 180, 200, 0.4), inset -3px -3px 6px rgba(255, 255, 255, 0.8);
-      color: #2563eb;
+      box-shadow: inset 3px 3px 6px #cbd5e1, inset -3px -3px 6px #ffffff;
+      color: #1e293b;
     }
 
     .contact-links img {
@@ -466,7 +471,7 @@
     <div class="container">
       <h2>About Me</h2>
       <div class="timeline-card" style="text-align: justify; max-width: 850px; margin: 0 auto;">
-        Lulusan S1 Pendidikan Matematika Universitas Ahmad Dahlan (IPK 3,96) dengan pemahaman kuat dalam statistika, penalaran kuantitatif, dan analisis data[cite: 1]. Memiliki pengalaman praktis sebagai Data Analyst dalam pembersihan data (*data cleaning*), pengembangan *interactive dashboard* Power BI, pemodelan kalkulasi DAX kustom, hingga analisis prediktif berbasis Python untuk mengoptimalkan efisiensi keputusan operasional dan bisnis[cite: 1].
+        Lulusan S1 Pendidikan Matematika Universitas Ahmad Dahlan (IPK 3,96) dengan pemahaman kuat dalam statistika, penalaran kuantitatif, dan analisis data. Memiliki pengalaman praktis sebagai Data Analyst dalam pembersihan data (<i>data cleaning</i>), pengembangan <i>interactive dashboard</i> Power BI, pemodelan kalkulasi DAX kustom, hingga analisis prediktif berbasis Python untuk mengoptimalkan efisiensi keputusan operasional dan bisnis.
       </div>
     </div>
   </section>
@@ -563,9 +568,9 @@
           <div class="timeline-title">Data Analyst</div>
           <div class="timeline-company">CV. Mitra Graha Putera (Panorama - Panoramart)</div>
           <ul style="list-style-type: none;">
-            <li class="timeline-bullet">• <b>Data Cleaning & Preprocessing:</b> Melakukan pembersihan data mentah (*raw data*) agar terstruktur dan siap digunakan untuk analisis bisnis operasional[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Power BI Dashboard Development:</b> Membangun dan merancang dashboard visualisasi data yang interaktif untuk kebutuhan monitoring KPI dan performa[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Custom DAX & Data Modeling:</b> Menyusun logika kalkulasi bisnis tingkat lanjut menggunakan rumus DAX (Calculated Columns & Measures) serta mengoptimalkan model data[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Data Cleaning & Preprocessing:</b> Melakukan pembersihan data mentah (<i>raw data</i>) agar terstruktur dan siap digunakan untuk analisis bisnis operasional.</li>
+            <li class="timeline-bullet">• <b>Power BI Dashboard Development:</b> Membangun dan merancang dashboard visualisasi data yang interaktif untuk kebutuhan monitoring KPI dan performa.</li>
+            <li class="timeline-bullet">• <b>Custom DAX & Data Modeling:</b> Menyusun logika kalkulasi bisnis tingkat lanjut menggunakan rumus DAX (Calculated Columns & Measures) serta mengoptimalkan model data.</li>
           </ul>
         </div>
 
@@ -575,8 +580,8 @@
           <div class="timeline-title">General Officer</div>
           <div class="timeline-company">PT. Ozami Inti Sinergi - Yogyakarta</div>
           <ul style="list-style-type: none;">
-            <li class="timeline-bullet">• <b>Data Management & Validation:</b> Mengelola entri, validasi, dan kontrol kualitas database operasional peserta/jadwal skala besar untuk akurasi data 100%[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Sales Data Analysis:</b> Menganalisis metrik interaksi media digital dan data <i>customer service</i> untuk rekomendasi strategi penjualan berbasis data[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Data Management & Validation:</b> Mengelola entri, validasi, dan kontrol kualitas database operasional peserta/jadwal skala besar untuk akurasi data 100%.</li>
+            <li class="timeline-bullet">• <b>Sales Data Analysis:</b> Menganalisis metrik interaksi media digital dan data <i>customer service</i> untuk rekomendasi strategi penjualan berbasis data.</li>
           </ul>
         </div>
 
@@ -607,9 +612,9 @@
           <div class="timeline-title">Data Analyst</div>
           <div class="timeline-company">CV. Mitra Graha Putera (Panorama - Panoramart)</div>
           <ul style="list-style-type: none;">
-            <li class="timeline-bullet">• <b>Data Cleaning & Preprocessing:</b> Pembersihan dan perapihan data mentah operasional penjualan/inventaris[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Power BI Dashboard Development:</b> Desain dashboard visual interaktif end-to-end yang bersih dan siap dieksekusi oleh decision-maker[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Custom DAX & Data Modeling:</b> Pembuatan logika bisnis kustom menggunakan kalkulasi DAX lanjutan serta pemodelan data antar-tabel[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Data Cleaning & Preprocessing:</b> Pembersihan dan perapihan data mentah operasional penjualan/inventaris.</li>
+            <li class="timeline-bullet">• <b>Power BI Dashboard Development:</b> Desain dashboard visual interaktif end-to-end yang bersih dan siap dieksekusi oleh decision-maker.</li>
+            <li class="timeline-bullet">• <b>Custom DAX & Data Modeling:</b> Pembuatan logika bisnis kustom menggunakan kalkulasi DAX lanjutan serta pemodelan data antar-tabel.</li>
           </ul>
         </div>
 
@@ -619,9 +624,9 @@
           <div class="timeline-title">General Officer (Kontrak)</div>
           <div class="timeline-company">PT. Ozami Inti Sinergi - Yogyakarta</div>
           <ul style="list-style-type: none;">
-            <li class="timeline-bullet">• <b>Manajemen & Analisis Data:</b> Entri, validasi, dan pengelolaan database operasional berskala besar untuk peserta kelas dan jadwal pelatihan (Akurasi 100%)[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Analisis Data Penjualan:</b> Analisis metrik interaksi media digital & data customer service (WA/IG/FB) untuk memberikan rekomendasi data-driven bagi tim komersial[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Otomatisasi Administrasi:</b> Kelola dokumentasi digital, draf berita acara, & CMS WordPress untuk efisiensi laporan mingguan[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Manajemen & Analisis Data:</b> Entri, validasi, dan pengelolaan database operasional berskala besar untuk peserta kelas dan jadwal pelatihan (Akurasi 100%).</li>
+            <li class="timeline-bullet">• <b>Analisis Data Penjualan:</b> Analisis metrik interaksi media digital & data customer service (WA/IG/FB) untuk memberikan rekomendasi data-driven bagi tim komersial.</li>
+            <li class="timeline-bullet">• <b>Otomatisasi Administrasi:</b> Kelola dokumentasi digital, draf berita acara, & CMS WordPress untuk efisiensi laporan mingguan.</li>
           </ul>
         </div>
 
@@ -631,9 +636,9 @@
           <div class="timeline-title">Magang / Student Employment - Administrasi & Dukungan Proyek</div>
           <div class="timeline-company">Universitas Ahmad Dahlan - Yogyakarta</div>
           <ul style="list-style-type: none;">
-            <li class="timeline-bullet">• <b>Pengolahan & Analisis Laporan:</b> Mengoptimalkan data pendaftaran 200-300 mitra sekolah/tahun (VLOOKUP, Pivot Table) untuk laporan evaluasi[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Visualisasi Data:</b> Menggunakan Google Colab untuk visualisasi data operasional antarperiode guna mengidentifikasi tren kegiatan tahunan[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Otomatisasi Alur Kerja:</b> Mengembangkan otomatisasi dokumen MoU & ratusan surat via Autocrat (Google Sheets/Docs), memangkas waktu kerja manual 80%[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Pengolahan & Analisis Laporan:</b> Mengoptimalkan data pendaftaran 200-300 mitra sekolah/tahun (VLOOKUP, Pivot Table) untuk laporan evaluasi.</li>
+            <li class="timeline-bullet">• <b>Visualisasi Data:</b> Menggunakan Google Colab untuk visualisasi data operasional antarperiode guna mengidentifikasi tren kegiatan tahunan.</li>
+            <li class="timeline-bullet">• <b>Otomatisasi Alur Kerja:</b> Mengembangkan otomatisasi dokumen MoU & ratusan surat via Autocrat (Google Sheets/Docs), memangkas waktu kerja manual 80%.</li>
           </ul>
         </div>
 
@@ -643,8 +648,8 @@
           <div class="timeline-title">Dukungan Administrasi (Magang) - Verifikasi Akun Guru Tertentu PPG 2025</div>
           <div class="timeline-company">Universitas Ahmad Dahlan - Yogyakarta</div>
           <ul style="list-style-type: none;">
-            <li class="timeline-bullet">• <b>Validasi & Pembersihan Data:</b> Melakukan Data Quality Check secara teliti terhadap 400+ akun data pribadi menggunakan Excel & Sheets[cite: 1].</li>
-            <li class="timeline-bullet">• <b>Integritas Database:</b> Menjamin akurasi & kerahasiaan data sensitif untuk kelancaran seleksi PPG nasional[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Validasi & Pembersihan Data:</b> Melakukan Data Quality Check secara teliti terhadap 400+ akun data pribadi menggunakan Excel & Sheets.</li>
+            <li class="timeline-bullet">• <b>Integritas Database:</b> Menjamin akurasi & kerahasiaan data sensitif untuk kelancaran seleksi PPG nasional.</li>
           </ul>
         </div>
 
@@ -699,7 +704,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Ayoudya Titan Widyasmara. Built with Soft Claymorphism UI.</p>
+      <p>&copy; 2026 Ayoudya Titan Widyasmara. Built with Calm Soft Claymorphism.</p>
     </div>
   </footer>
 
