@@ -30,7 +30,7 @@
       margin: 0 auto;
     }
 
-    /* HEADER CLAY EFFECT */
+    /* HEADER CLAY EFFECT & RESPONSIVE FIX */
     .site-header {
       position: fixed;
       top: 15px;
@@ -42,14 +42,16 @@
       border-radius: 20px;
       box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
       z-index: 1000;
-      padding: 5px 0;
+      padding: 10px 0;
     }
     
     .site-header .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 20px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     
     .site-name {
@@ -60,14 +62,14 @@
     
     .nav-menu {
       display: flex;
-      gap: 20px;
+      gap: 18px;
     }
     
     .nav-menu a {
       text-decoration: none;
       color: #64748b;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       transition: all 0.2s ease;
     }
     
@@ -81,7 +83,7 @@
     }
     
     .social-icons img {
-      height: 22px;
+      height: 20px;
       width: auto;
       transition: transform 0.2s;
     }
@@ -92,37 +94,40 @@
     
     /* HERO SECTION */
     .hero-section {
-      height: 75vh;
+      min-height: 70vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding-top: 60px;
+      padding-top: 110px;
+      padding-bottom: 40px;
     }
 
     .hero-card {
       background: #f0f4f8;
-      padding: 40px 30px;
+      padding: 40px 24px;
       border-radius: 30px;
       box-shadow: 12px 12px 24px #d1d9e6, -12px -12px 24px #ffffff;
       max-width: 700px;
+      width: 100%;
     }
     
     .hero-subtitle {
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: #3b82f6;
       background: #e0e7ff;
-      padding: 6px 16px;
+      padding: 8px 16px;
       border-radius: 20px;
       display: inline-block;
       box-shadow: inset 3px 3px 6px #c7d2fe, inset -3px -3px 6px #ffffff;
-      margin-top: 10px;
+      margin-top: 12px;
+      line-height: 1.4;
     }
     
     /* SECTIONS */
     .section {
-      padding: 60px 0;
+      padding: 50px 0;
     }
     
     .section h2 {
@@ -133,19 +138,20 @@
     }
 
     .category-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin: 40px 0 20px 0;
       color: #475569;
       display: flex;
       align-items: center;
       gap: 10px;
+      font-weight: 700;
     }
 
     /* CLAY CARDS */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
     
     .clay-card {
@@ -165,7 +171,7 @@
     
     .clay-card img {
       width: 100%;
-      height: 180px;
+      height: 170px;
       object-fit: cover;
       border-radius: 16px;
       box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
@@ -176,19 +182,20 @@
     .btn-clay {
       display: inline-block;
       text-align: center;
-      padding: 12px 18px;
-      border-radius: 16px;
+      padding: 10px 16px;
+      border-radius: 14px;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 700;
       transition: all 0.2s ease;
       cursor: pointer;
+      border: none;
     }
 
     .btn-blue {
       background: #3b82f6;
       color: white;
-      box-shadow: 5px 5px 10px #c2cbd8, inset 2px 2px 4px #93c5fd, inset -2px -2px 4px #1d4ed8;
+      box-shadow: 4px 4px 8px #c2cbd8, inset 2px 2px 4px #93c5fd, inset -2px -2px 4px #1d4ed8;
     }
 
     .btn-yellow {
@@ -203,6 +210,14 @@
       box-shadow: 4px 4px 8px #c2cbd8, inset 2px 2px 4px #fdba74, inset -2px -2px 4px #c2410c;
     }
 
+    .btn-outline {
+      background: #f0f4f8;
+      color: #3b82f6;
+      box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
+      border: 1px solid #dbeafe;
+      padding: 12px 24px;
+    }
+
     .btn-clay:hover {
       transform: translateY(-2px);
     }
@@ -214,26 +229,25 @@
     /* FLOATING RATE CARD WIDGET */
     .floating-ratecard {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
+      bottom: 20px;
+      right: 20px;
       background: #8b5cf6;
       color: white;
-      padding: 14px 22px;
+      padding: 12px 18px;
       border-radius: 50px;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       text-decoration: none;
       box-shadow: 6px 6px 16px #b8c2d1, inset 2px 2px 4px #c4b5fd, inset -2px -2px 4px #6d28d9;
       display: flex;
       align-items: center;
-      gap: 10px;
-      z-index: 9999;
+      gap: 8px;
+      z-index: 999;
       transition: all 0.3s ease;
     }
 
     .floating-ratecard:hover {
-      transform: scale(1.06) translateY(-3px);
-      box-shadow: 8px 8px 20px #a4b1c5, inset 2px 2px 4px #c4b5fd, inset -2px -2px 4px #6d28d9;
+      transform: scale(1.05) translateY(-2px);
       background: #7c3aed;
     }
 
@@ -254,35 +268,121 @@
     }
 
     .timeline-date {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
       color: #3b82f6;
     }
 
     .timeline-title {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #1e293b;
-      margin: 4px 0 8px 0;
+      margin: 4px 0 2px 0;
+    }
+
+    .timeline-company {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: 10px;
+    }
+
+    .timeline-bullet {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-left: 18px;
+      margin-bottom: 6px;
+    }
+
+    /* MODAL POP-UP STYLES */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.4);
+      backdrop-filter: blur(5px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #f0f4f8;
+      border-radius: 28px;
+      max-width: 750px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 30px 25px;
+      box-shadow: 16px 16px 32px #b8c2d1, -16px -16px 32px #ffffff;
+      position: relative;
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 15px;
+    }
+
+    .modal-title {
+      font-size: 1.3rem;
+      color: #1e293b;
+      font-weight: 700;
+    }
+
+    .close-btn {
+      background: #f0f4f8;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #64748b;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      box-shadow: 4px 4px 8px #d1d9e6, -4px -4px 8px #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .close-btn:hover {
+      color: #ef4444;
+      transform: scale(1.05);
     }
 
     /* CONTACT CLAY */
     .contact-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       flex-wrap: wrap;
     }
     
     .contact-links a {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 14px 24px;
+      gap: 8px;
+      padding: 12px 20px;
       background: #f0f4f8;
-      border-radius: 20px;
+      border-radius: 18px;
       box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
       font-weight: 600;
+      font-size: 0.9rem;
       color: #334155;
       text-decoration: none;
       transition: all 0.2s ease;
@@ -294,8 +394,8 @@
     }
 
     .contact-links img {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
     
     footer {
@@ -303,6 +403,38 @@
       padding: 30px 0;
       font-size: 0.85rem;
       color: #94a3b8;
+    }
+
+    /* MOBILE RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .site-header .container {
+        justify-content: center;
+      }
+      .site-name {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2px;
+      }
+      .nav-menu {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-menu a {
+        font-size: 0.8rem;
+      }
+      .social-icons {
+        display: none;
+      }
+      .hero-section h2 {
+        font-size: 1.7rem !important;
+      }
+      .floating-ratecard {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 0.78rem;
+      }
     }
   </style>
 </head>
@@ -337,8 +469,8 @@
   <!-- HERO -->
   <section id="home" class="hero-section" data-aos="fade-up">
     <div class="hero-card">
-      <p style="font-size: 1.1rem; color: #64748b; font-weight: 600; margin-bottom: 4px;">Hi, I'm</p>
-      <h2 style="font-size: 2.3rem; color: #1e293b;">Ayoudya Titan Widyasmara 👋</h2>
+      <p style="font-size: 1rem; color: #64748b; font-weight: 600; margin-bottom: 4px;">Hi, I'm</p>
+      <h2 style="font-size: 2.2rem; color: #1e293b;">Ayoudya Titan Widyasmara 👋</h2>
       <span class="hero-subtitle">Business Intelligence Analyst | Power BI & Data Analytics</span>
     </div>
   </section>
@@ -348,7 +480,7 @@
     <div class="container">
       <h2>About Me</h2>
       <div class="timeline-card" style="text-align: justify; max-width: 850px; margin: 0 auto;">
-        Mathematics graduate and detail-oriented Data Analyst with a solid foundation in statistics, quantitative reasoning, and predictive modeling. Experienced in bridging administration and data management using Advanced Excel, Google Workspace, Python, and Power BI. Eager to deliver actionable insights and intuitive visual dashboards.
+        Lulusan S1 Pendidikan Matematika Universitas Ahmad Dahlan (IPK 3,96) dengan pemahaman kuat dalam statistika, penalaran kuantitatif, dan analisis data[cite: 1]. Memiliki pengalaman dalam manajemen & validasi database operasional, analisis data penjualan, serta pemodelan prediktif berbasis Python dan Power BI untuk mengoptimalkan efisiensi operasional[cite: 1].
       </div>
     </div>
   </section>
@@ -438,31 +570,126 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- EXPERIENCE (UTAMA & HIGHLIGHT DATA) -->
   <section id="experience" class="section" data-aos="fade-up">
     <div class="container">
-      <h2>Pengalaman</h2>
+      <h2>Pengalaman Kerja</h2>
       <div class="timeline">
         
+        <!-- Experience 1 -->
         <div class="timeline-card">
-          <div class="timeline-date">2023 - Sekarang</div>
-          <div class="timeline-title">Business Intelligence & Data Specialist</div>
-          <p style="font-size: 0.9rem; color: #64748b;">
-            Pengembangan dashboard interaktif menggunakan Power BI dan DAX kompleks, memvalidasi ribuan data operasional, serta melakukan analisis prediktif berbasis Python.
-          </p>
+          <div class="timeline-date">Okt 2025 - Feb 2026</div>
+          <div class="timeline-title">General Officer</div>
+          <div class="timeline-company">PT. Ozami Inti Sinergi - Yogyakarta</div>
+          <ul style="list-style-type: none;">
+            <li class="timeline-bullet">• <b>Data Management & Validation:</b> Mengelola entri, validasi, dan kontrol kualitas database operasional peserta/jadwal skala besar untuk akurasi data 100%[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Sales Data Analysis:</b> Menganalisis metrik interaksi media digital dan data <i>customer service</i> untuk rekomendasi strategi penjualan berbasis data[cite: 1].</li>
+          </ul>
         </div>
 
+        <!-- Experience 2 -->
         <div class="timeline-card">
-          <div class="timeline-date">2022 - 2023</div>
-          <div class="timeline-title">Administrative Data Staff</div>
-          <p style="font-size: 0.9rem; color: #64748b;">
-            Pengelolaan dan rekapan data bulanan berbasis Advanced Excel & Google Sheets untuk efisiensi alur kerja operasional.
-          </p>
+          <div class="timeline-date">Mei 2023 - Agt 2025</div>
+          <div class="timeline-title">Administrasi & Dukungan Proyek (Magang / Student Employment)</div>
+          <div class="timeline-company">Universitas Ahmad Dahlan - Yogyakarta</div>
+          <ul style="list-style-type: none;">
+            <li class="timeline-bullet">• <b>Data Processing & Analysis:</b> Mengolah data pendaftaran 200-300 mitra sekolah/tahun menggunakan Advanced Excel (VLOOKUP, Pivot Table) dan Google Colab untuk visualisasi tren[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Workflow Automation:</b> Mengembangkan otomatisasi dokumen perjanjian kerja sama (MoU) dan ratusan surat via Autocrat yang memangkas waktu proses hingga 80%[cite: 1].</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- TOMBOL BUKA POP-UP MODAL -->
+      <div style="text-align: center; margin-top: 30px;">
+        <button onclick="openModal()" class="btn-clay btn-outline">
+          ✨ Lihat Selengkapnya Pengalaman Kerja (Pop-up)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL POP-UP SELURUH PENGALAMAN KERJA -->
+  <div id="experienceModal" class="modal-overlay" onclick="closeModalOutside(event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">📌 Full Experience Timeline</h3>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      
+      <div class="timeline">
+        
+        <!-- Job 1 -->
+        <div class="timeline-card">
+          <div class="timeline-date">Okt 2025 - Feb 2026</div>
+          <div class="timeline-title">General Officer (Kontrak)</div>
+          <div class="timeline-company">PT. Ozami Inti Sinergi - Yogyakarta</div>
+          <ul style="list-style-type: none;">
+            <li class="timeline-bullet">• <b>Manajemen & Analisis Data:</b> Entri, validasi, dan pengelolaan database operasional berskala besar untuk peserta kelas dan jadwal pelatihan (Akurasi 100%)[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Analisis Data Penjualan:</b> Analisis metrik interaksi media digital & data customer service (WA/IG/FB) untuk memberikan rekomendasi data-driven bagi tim komersial[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Otomatisasi Administrasi:</b> Kelola dokumentasi digital, draf berita acara, & CMS WordPress untuk efisiensi laporan mingguan[cite: 1].</li>
+          </ul>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="timeline-card">
+          <div class="timeline-date">Mei 2023 - Agt 2025</div>
+          <div class="timeline-title">Magang / Student Employment - Administrasi & Dukungan Proyek</div>
+          <div class="timeline-company">Universitas Ahmad Dahlan - Yogyakarta</div>
+          <ul style="list-style-type: none;">
+            <li class="timeline-bullet">• <b>Pengolahan & Analisis Laporan:</b> Mengoptimalkan data pendaftaran 200-300 mitra sekolah/tahun (VLOOKUP, Pivot Table) untuk laporan evaluasi[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Visualisasi Data:</b> Menggunakan Google Colab untuk visualisasi data operasional antarperiode guna mengidentifikasi tren kegiatan tahunan[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Otomatisasi Alur Kerja:</b> Mengembangkan otomatisasi dokumen MoU & ratusan surat via Autocrat (Google Sheets/Docs), memangkas waktu kerja manual 80%[cite: 1].</li>
+          </ul>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="timeline-card">
+          <div class="timeline-date">Mei 2025 - Juli 2025</div>
+          <div class="timeline-title">Dukungan Administrasi (Magang) - Verifikasi Akun Guru Tertentu PPG 2025</div>
+          <div class="timeline-company">Universitas Ahmad Dahlan - Yogyakarta</div>
+          <ul style="list-style-type: none;">
+            <li class="timeline-bullet">• <b>Validasi & Pembersihan Data:</b> Melakukan Data Quality Check secara teliti terhadap 400+ akun data pribadi menggunakan Excel & Sheets[cite: 1].</li>
+            <li class="timeline-bullet">• <b>Integritas Database:</b> Menjamin akurasi & kerahasiaan data sensitif untuk kelancaran seleksi PPG nasional[cite: 1].</li>
+          </ul>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="timeline-card">
+          <div class="timeline-date">Okt 2024 - Nov 2024</div>
+          <div class="timeline-title">Dukungan Administrasi (Magang) - Akreditasi AQAS, FKIP UAD</div>
+          <div class="timeline-company">Universitas Ahmad Dahlan - Yogyakarta</div>
+          <ul style="list-style-type: none;">
+            <li class="timeline-bullet">• <b>Audit & Kontrol Kualitas:</b> Audit dokumen akreditasi internasional AQAS untuk 3 prodi.</li>
+            <li class="timeline-bullet">• <b>Manajemen Dokumen Terstruktur:</b> Menyusun, menerjemahkan, & kontrol kualitas 6+ buku akreditasi utama.</li>
+          </ul>
+        </div>
+
+        <!-- Job 5 -->
+        <div class="timeline-card">
+          <div class="timeline-date">Mar 2024 - Mei 2025</div>
+          <div class="timeline-title">Administrasi & Manajemen Data (Magang) - PPG Prajabatan Gel. 1 & 2</div>
+          <div class="timeline-company">PPG - Universitas Ahmad Dahlan</div>
+          <ul style="list-style-type: none;">
+            <li class="timeline-bullet">• <b>Pengolahan Database Skala Besar:</b> Entri, validasi, & rekonsiliasi data pribadi 240 guru mitra (NIP, NIK, No Rekening) dari fisik ke sistem internal.</li>
+            <li class="timeline-bullet">• <b>Keamanan Data & Workflow:</b> Menjaga standar kerahasiaan & mengelola pemberkasan resmi (MoU, berita acara).</li>
+          </ul>
+        </div>
+
+        <!-- Job 6 -->
+        <div class="timeline-card">
+          <div class="timeline-date">Juli 2023 - Sep 2023</div>
+          <div class="timeline-title">Bendahara Umum - Program Pengenalan Kampus (P2K)</div>
+          <div class="timeline-company">Himpunan Mahasiswa Pendidikan Matematika UAD</div>
+          <ul style="list-style-type: none;">
+            <li class="timeline-bullet">• <b>Manajemen Kuantitatif & Anggaran:</b> Mengelola anggaran kegiatan senilai Rp5.000.000 dengan lembar kerja digital.</li>
+            <li class="timeline-bullet">• <b>Analisis Efisiensi Biaya:</b> Mencapai efisiensi alokasi dana hingga 90% dan realisasi proker 100%.</li>
+          </ul>
         </div>
 
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- CONTACT -->
   <section id="contact" class="section" data-aos="fade-up">
@@ -485,6 +712,23 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    // JS MODAL CONTROLLER
+    function openModal() {
+      document.getElementById('experienceModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Matikan scroll body saat pop up terbuka
+    }
+
+    function closeModal() {
+      document.getElementById('experienceModal').style.display = 'none';
+      document.body.style.overflow = 'auto'; // Hidupkan lagi scroll
+    }
+
+    function closeModalOutside(event) {
+      if (event.target.id === 'experienceModal') {
+        closeModal();
+      }
+    }
   </script>
 </body>
 </html>
